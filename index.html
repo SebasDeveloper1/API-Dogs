@@ -17,12 +17,19 @@
         <h1 class="header__title">API-Dogs Workshop</h1>
         <p class="header__description">🐶API consumption practice with JavaScript💻</p>
     </header>
-    <main>
+    <main class=" main">
         <div class="btn-container">
-            <button class="button" id="create-btn">Add image</button>
+            <button class="button" id="create-btn">Add one image</button>
             <button class="button" id="delete-btn">Delete image</button>
             <button class="button" id="reset-btn">Reset images</button>
         </div>
+        <form class="form-quantity" action="">
+            <div class="input-section">
+                <label class="label__quantity" for="input-quantity">Number of images to upload</label>
+                <input class="input__quantity" type="number" id="input-quantity">
+            </div>
+            <button class="button button__quantity" id="add-quantity">Add images</button>
+        </form>
         <div class="card-container">
         </div>
     </main>
