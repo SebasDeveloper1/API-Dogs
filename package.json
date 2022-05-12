@@ -1,0 +1,38 @@
+{
+  "name": "api-dogs",
+  "version": "1.0.0",
+  "description": "Workshop API REST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development --config webpack.config.dev.js",
+    "build": "webpack --mode production --config webpack.config.js",
+    "start": "webpack serve --mode development --config webpack.config.dev.js"
+  },
+  "keywords": [
+    "Javascript",
+    "API",
+    "Dogs"
+  ],
+  "author": "Sebastian-pedroza",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "dotenv-webpack": "^7.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "progress-webpack-plugin": "^1.0.16",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

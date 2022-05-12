@@ -1,0 +1,347 @@
+/*Gobal*/
+:root {
+  --color_primary: #080f28;
+  --color-secondary: #141a32;
+  --text-color-primary: #ffffff;
+  --text-color-secondary: #3d4f91;
+  --color-btn: #007bff;
+  --shadow: rgba(0, 0, 0, 0.75);
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color_primary);
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background-color: var(--color-secondary);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-btn);
+  border-radius: 10px;
+}
+
+/*Header*/
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--color-secondary);
+  text-align: center;
+}
+
+.header__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-color-primary);
+}
+
+.header__description {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-color-secondary);
+  margin-top: 20px;
+}
+
+/*Main*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Buttons Section*/
+.section__title {
+  width: 90%;
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--text-color-primary);
+  margin: 40px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ffffff59;
+}
+
+.random-dogs-section,
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+  flex-wrap: wrap;
+  width: 90%;
+  padding: 0 10px;
+  background-color: var(--color-secondary);
+  border-radius: 8px;
+}
+
+.form-quantity {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label__quantity,
+.form__label-file {
+  margin-bottom: 4px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--text-color-primary);
+}
+
+.input__quantity {
+  width: 100px;
+  padding: 10px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color_primary);
+  border: none;
+  outline: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.button {
+  width: auto;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  background-color: var(--color-btn);
+  border-radius: 20px;
+  color: var(--color_primary);
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button__quantity {
+  margin: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.button-circle {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: var(--color-btn);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button-circle:hover {
+  transform: scale(1.1);
+}
+
+/*Favorites Section*/
+.card-container,
+.card-container-favorites {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+  justify-content: center;
+  gap: 30px;
+  width: 90%;
+  margin: 60px 0;
+}
+
+.card-random,
+.card-favorite {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: var(--color-secondary);
+  box-shadow: 8px 16px 32px 0px var(--shadow);
+}
+.card-random:hover,
+.card-favorite:hover {
+  transform: translateY(-15px) scale(1.1);
+}
+
+.card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
+
+/*Add file*/
+.form-file {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__label-file {
+  font-size: 1.8rem;
+}
+
+input[type="file"]#imageFile {
+  position: absolute;
+  z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+label[for="imageFile"] {
+  display: inline-block;
+  width: fit-content;
+  padding: 15px 40px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color-primary);
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--color-btn);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+label[for="file"]:hover {
+  transform: scale(1.1);
+}
+
+.form__preview-file {
+  width: 100%;
+  height: 250px;
+  margin: 20px 0;
+  border-radius: 28px;
+  border: 2px solid var(--color-btn);
+  object-fit: cover;
+  object-position: center;
+}
+
+/*Footer*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 60px 0;
+  text-align: center;
+  border-top: 1px solid var(--color-btn);
+}
+
+.footer__title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text-color-primary);
+  margin-top: 20px;
+}
+
+.footer__subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color-secondary);
+  margin-top: 20px;
+}
+
+/*Notification*/
+.notification {
+  position: fixed;
+  right: 24px;
+  top: -300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  padding: 4px;
+  background-color: var(--color-btn);
+  border-radius: 5px;
+  box-shadow: 8px 16px 32px 0px var(--shadow);
+  transition: transform 1s;
+}
+
+.notification__error-message {
+  font-size: 1.6rem;
+  color: var(--color_primary);
+}
+
+/*Modal*/
+.modal-container {
+  position: fixed;
+  left: 0;
+  top: -100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  transition: transform 1s;
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+  border: 5px solid #3d4f91;
+  border-radius: 18px;
+  background-color: var(--color_primary);
+  overflow: hidden;
+}
+
+.modal__image {
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.modal__button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color-primary);
+  background-color: #3d4f91;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>API-Dogs</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">API-Dogs Workshop</h1>
+        <p class="header__description">🐶API consumption practice with JavaScript💻</p>
+    </header>
+    <main class=" main">
+        <section class="random-dogs-section" id="randomDogs">
+            <h2 class="section__title">Random images section</h2>
+            <div class="btn-container">
+                <button type="button" class="button" id="createBtn">Add one image</button>
+                <button type="button" class="button" id="deleteBtn">Delete last image</button>
+                <button type="button" class="button" id="resetBtn">Reset images</button>
+
+                <form class="form-quantity" action="">
+                    <label class="label__quantity" for="inputQuantity">Number of images</label>
+                    <div class="input-section">
+                        <input class="input__quantity" type="number" id="inputQuantity">
+                        <button type="button" class="button button__quantity" id="addQuantityBtn">Add</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card-container">
+            </div>
+        </section>
+
+        <section class="random-dogs-section" id="favoritesDogs">
+            <h2 class="section__title">Favorites images section</h2>
+            <div class="card-container-favorites">
+            </div>
+        </section>
+
+        <section class="form-section" id="uploadingImage">
+            <h2 class="section__title">Add image to database</h2>
+            <form class="form-file" id="uploadingForm">
+                <label for="imageFile" class="form__label-file">💻 Select image to add</label>
+                <input type="file" id="imageFile" class="form__input-file" name="file" accept="image/*">
+            </form>
+            <button id="addFileBtn" class="button" type="button">🚀 Send image</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2 class="footer__title">Made with the 💙 by Sebastian Pedroza.</h2>
+        <p class="footer__subtitle">All rights reserved - © 2022.</p>
+    </footer>
+
+    <div id="containerNotificationError" class="notification">
+    </div>
+
+    <div class="modal-container">
+        <div class="modal">
+            <img id="modalImage" class="modal__image" alt="Dog image" />
+            <button id="modalCloseBtn" type="button" class="button-circle modal__button">X</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
