@@ -1,6 +1,6 @@
 {
   "name": "api-dogs",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Workshop API REST",
   "main": "index.js",
   "scripts": {
