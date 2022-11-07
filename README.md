@@ -1,5 +1,7 @@
 # 🐶Dog Image Gallery🖼
 
+🐶Thanks to this fantastic tool you will be able to see and enjoy the most tender and incredible images of puppies on the web
+
 Final project of the REST API Consumption Course with JavaScript in [Platzi](https://platzi.com/cursos/api/ "Platzi"). 💚💻
 
   <p align="center">
